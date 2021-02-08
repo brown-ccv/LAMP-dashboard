@@ -878,6 +878,13 @@ function Question({ onResponse, number, text, desc, type, options, value, startT
     { label: t("Several Times"), value: 1 },
     { label: t("Not at all"), value: 0 },
   ]
+  const _opts = [
+    { label: t("Very much"), value: 4 },
+    { label: t("Quite a bit"), value: 3 },
+    { label: t("Somewhat"), value: 2 },
+    { label: t("A little bit"), value: 1 },
+    { label: t("Not at all"), value: 0 },
+  ]
   switch (type) {
     case "slider":
       options = options.sort((a, b) => parseInt(a.value) - parseInt(b.value))
@@ -890,7 +897,8 @@ function Question({ onResponse, number, text, desc, type, options, value, startT
     case "boolean":
     case "select":
     case "list":
-      const selectOptions = type === "boolean" ? _binaryOpts : type === "likert" ? _likertOpts : options
+    case "opts":
+      const selectOptions = type === "boolean" ? _binaryOpts : type === "likert" ? _likertOpts :type === "opts" ? _opts : options
       component = <RadioOption options={selectOptions} onChange={onChange} value={!!value ? value.value : undefined} />
       break
     case "short":

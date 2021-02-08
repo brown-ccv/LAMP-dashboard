@@ -145,6 +145,63 @@
     {
       "#type": "Activity",
       "#parent": "study1",
+      "id": "activity2",
+      "spec": "lamp.survey",
+      "name": "Health",
+      "settings": [
+        {
+          "text": "How much have you been bothered by Stomach or bowel problems?",
+          "type": "opts",
+          "options": null
+        },
+        {
+          "text": "How much have you been bothered by Backpain?",
+          "type": "opts",
+          "options": null
+        },
+        {
+          "text": "How much have you been bothered by Pain in your arms, legs, or joints?",
+          "type": "opts",
+          "options": null
+        },
+        {
+          "text": "How much have you been bothered by Headaches?",
+          "type": "opts",
+          "options": null
+        },
+        {
+          "text": "How much have you been bothered by Chest pain or shortness of breath?",
+          "type": "opts",
+          "options": null
+        },
+        {
+          "text": "How much have you been bothered by Dizziness?",
+          "type": "opts",
+          "options": null
+        },
+        {
+          "text": "How much have you been bothered by Feeling tired or having low energy?",
+          "type": "opts",
+          "options": null
+        },
+        {
+          "text": "How much have you been bothered by Trouble sleeping?",
+          "type": "opts",
+          "options": null
+        }
+      ],
+      "schedule": [
+        {
+          "start_date": "2018-08-22T00:00:00.000Z",
+          "time": "2018-08-22T14:00:00.000Z",
+          "repeat_interval": "triweekly",
+          "custom_time": null
+        }
+      ]
+    },
+    {
+      "#type": "Activity",
+      "#parent": "study1",
       "id": "activity3",
       "spec": "lamp.survey",
       "name": "Anxiety",
